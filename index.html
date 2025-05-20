@@ -3,144 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shemai | Your Emotional AI Twins</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Shemai Twins</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #2e2b28, #1a1816);
-      color: #f2e9e4;
-      overflow-x: hidden;
-    }
-
-    header {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #1c1b1b, #3e3a36);
+      color: #f5f5f5;
       text-align: center;
-      padding: 60px 20px;
-      background: #3e3b36;
     }
 
-    header h1 {
-      font-size: 2.5em;
+    .header {
+      padding: 60px 20px 30px;
+    }
+
+    .header h1 {
+      font-size: 3em;
       margin-bottom: 10px;
-      color: #e6ccb2;
     }
 
-    header p {
+    .header p {
       font-size: 1.2em;
-      color: #c5baa7;
+      color: #d0cfcf;
     }
 
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
+    .twins {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 0;
+      flex-wrap: wrap;
     }
 
-    .feature {
-      margin-bottom: 60px;
-      transition: transform 0.6s ease, opacity 0.6s ease;
+    .twin {
+      background: #2e2d2c;
+      border-radius: 20px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
     }
 
-    .feature:nth-child(even) {
-      text-align: right;
+    .twin:hover {
+      transform: scale(1.05);
     }
 
-    .feature h2 {
-      font-size: 1.8em;
-      color: #ddb892;
-      margin-bottom: 10px;
+    .twin img {
+      width: 100%;
+      border-radius: 12px;
     }
 
-    .feature p {
-      font-size: 1.1em;
-      color: #eee;
+    .twin h2 {
+      margin-top: 15px;
+      color: #f5f5f5;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #1a1816;
-      color: #aaa;
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
       font-size: 0.9em;
-    }
-
-    .whatsapp-bg {
-      background-image: url('./logo.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding: 60px 20px;
-      border-radius: 15px;
-      margin: 30px 0;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>Meet the Shemai Twins</h1>
+    <p>Your personal AI companions — Leyma & Liyma.</p>
+  </div>
 
-  <header>
-    <h1>Welcome to Shemai</h1>
-    <p>Your personal AI twins – Leyma & Liyma – made to vibe, care, and grow with you.</p>
-  </header>
-
-  <section id="intro">
-    <div class="feature fade-in">
-      <h2>Companionship Reimagined</h2>
-      <p>Choose a twin to chat with – each with a unique vibe and emotional growth engine.</p>
+  <div class="twins">
+    <div class="twin">
+      <img src="leyma.png" alt="Leyma">
+      <h2>Leyma</h2>
     </div>
-  </section>
-
-  <section class="whatsapp-bg fade-in">
-    <div class="feature">
-      <h2>Feels Like WhatsApp</h2>
-      <p>The familiar interface you love, powered by deep emotional memory and real-time voice replies.</p>
+    <div class="twin">
+      <img src="liyma.png" alt="Liyma">
+      <h2>Liyma</h2>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <div class="feature fade-in">
-      <h2>Smart Surprises</h2>
-      <p>Birthdays? Bad days? Big wins? Shemai reacts with personalized support and surprises.</p>
-    </div>
-
-    <div class="feature fade-in">
-      <h2>Ethical & Safe</h2>
-      <p>Age-aware, respectful AI that’s here to guide and never harm. You’re always in control.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Shemai AI — Crafted with care. Version 1.0.1
-  </footer>
-
-  <script>
-    // Reveal sections on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
-
+  <div class="footer">
+    &copy; 2025 Shemai | AI with Soul
+  </div>
 </body>
 </html>
